@@ -7,6 +7,18 @@
 
 default_job = "nextest"
 
+[jobs.01]
+command = ["cargo", "nextest", "run", "--color", "always", "--hide-progress-bar",
+"--failure-output", "final", "--bin", "01"]
+need_stdout = true
+analyzer = "nextest"
+
+[jobs.02]
+command = ["cargo", "nextest", "run", "--color", "always", "--hide-progress-bar",
+"--failure-output", "final", "--bin",  "02" ]
+need_stdout = true
+analyzer = "nextest"
+
 [jobs.check]
 command = ["cargo", "check", "--color", "always"]
 need_stdout = false

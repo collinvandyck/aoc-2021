@@ -25,6 +25,12 @@ command = ["cargo", "nextest", "run", "--color", "always", "--hide-progress-bar"
 need_stdout = true
 analyzer = "nextest"
 
+[jobs.04]
+command = ["cargo", "nextest", "run", "--color", "always", "--hide-progress-bar",
+"--failure-output", "final", "--bin",  "04" ]
+need_stdout = true
+analyzer = "nextest"
+
 [jobs.check]
 command = ["cargo", "check", "--color", "always"]
 need_stdout = false
